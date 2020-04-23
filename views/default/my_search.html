@@ -1,0 +1,13 @@
+{{extend 'layout.html'}}		
+								
+	<form id="searchform" >
+		<input type="text" id="inputsearch" name="inputsearch" placeholder="Enter your Query">
+			<button id="submitbutton" >Search</button>
+		</div>
+	</form>
+
+	{{for thing in things:}}
+
+		{{=LI('%s: %s' %(thing['name'], thing['description']))}}
+	{{pass}}
+	
